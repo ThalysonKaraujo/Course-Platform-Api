@@ -15,6 +15,8 @@ A API permite o gerenciamento completo de cursos, módulos, aulas, matrículas e
 
 * 📄 **Documentação Interativa:** A API é 100% documentada com Swagger (OpenAPI), 
 
+* 🚀 **Pronto para Deploy Automatizado:** O projeto vem pré-configurado para um deploy contínuo (CI/CD) e fácil na plataforma [Railway](https://railway.app), com perfis de ambiente separados para desenvolvimento e produção.
+
 * ✅ **Suíte de Testes Completa:** O projeto conta com uma suíte de mais de 75 testes de integração (End-to-End) que validam todos os cenários de sucesso e de erro da aplicação, garantindo alta confiabilidade e facilitando a manutenção.
 
 ## Tecnologias Utilizadas
@@ -72,4 +74,8 @@ A API estará disponivel em http://localhost:8000.
 ## Acessando a Documentação da API
 Após iniciar a aplicação, a documentação interativa do Swagger estará disponível no seu navegador. Use-a para explorar e testar todos os endpoints.
 
+### Local
 http://localhost:8000/swagger-ui.html
+
+### Deploy
+https://course-platform-api-production.up.railway.app/swagger-ui/index.html
