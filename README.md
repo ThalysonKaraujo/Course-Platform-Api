@@ -47,7 +47,7 @@ git clone https://github.com/ThalysonKaraujo/Course-Platform-Api.git
 cd Course-Platform-Api
 ````
 
-### 3. Configurar o Bando de Dados com Docker
+### 3. Configurar o Banco de Dados com Docker
 
 ````
 docker run --name pg-cursos -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=sua_senha_aqui -e POSTGRES_DB=curso_platform_db -p 5433: 5432 -d postgres
