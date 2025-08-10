@@ -192,7 +192,7 @@ class LessonControllerE2ETest {
             DadosAtualizacaoLesson updateDto = new DadosAtualizacaoLesson("Aula Nova", "Nova Desc", "http://video.novo", 200, 2);
 
             mockMvc.perform(put("/modules/{moduleId}/lessons/{lessonId}", module.getId(), lesson.getId())
-                            .header("Authorization", "Bearer " + anotherInstructorToken) 
+                            .header("Authorization", "Bearer " + anotherInstructorToken)
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(objectMapper.writeValueAsString(updateDto)))
                     .andExpect(status().isForbidden());
