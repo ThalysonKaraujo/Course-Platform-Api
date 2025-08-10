@@ -69,7 +69,7 @@ Com o banco de dados rodando e as variáveis configuradas, execute a aplicação
 ``````
 A API estará disponivel em http://localhost:8080.
 
-##Acessando a Documentação da API
+## Acessando a Documentação da API
 Após iniciar a aplicação, a documentação interativa do Swagger estará disponível no seu navegador. Use-a para explorar e testar todos os endpoints.
 
 http://localhost:8080/swagger-ui.html
