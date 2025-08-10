@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@OpenAPIDefinition(servers = {@Server(url = "https://course-platform-api-production.up.railway.app", description = "Server de Produção")})
+@OpenAPIDefinition(servers = {@Server(url = "https://course-platform-api-production.up.railway.app", description = "Server URL")})
 @SpringBootApplication
 public class CoursePlatformBackendApplication {
 
