@@ -142,7 +142,7 @@ class EnrollmentControllerE2ETest {
         @Test
         @DisplayName("Deve retornar 409 ao tentar matricular em um curso que já está matriculado")
         void naoDeveCriarMatriculaDuplicada() throws Exception {
-            createEnrollment(studentUser1, course); // Matrícula pré-existente
+            createEnrollment(studentUser1, course);
 
             mockMvc.perform(post("/enrollments")
                             .header("Authorization", "Bearer " + studentToken1)
@@ -155,9 +155,9 @@ class EnrollmentControllerE2ETest {
         @DisplayName("Deve retornar 400 ao tentar matricular outro usuário")
         void naoDevePermitirMatricularOutroUsuario() throws Exception {
             mockMvc.perform(post("/enrollments")
-                            .header("Authorization", "Bearer " + studentToken1) // Logado como aluno 1
+                            .header("Authorization", "Bearer " + studentToken1)
                             .contentType(MediaType.APPLICATION_JSON)
-                            .content(String.format("{\"userId\":%d,\"courseId\":%d}", studentUser2.getId(), course.getId()))) // Tentando matricular aluno 2
+                            .content(String.format("{\"userId\":%d,\"courseId\":%d}", studentUser2.getId(), course.getId())))
                     .andExpect(status().isBadRequest());
         }
 
@@ -275,7 +275,7 @@ class EnrollmentControllerE2ETest {
             EnrollmentJPA enrollment = createEnrollment(studentUser1, course);
 
             mockMvc.perform(get("/enrollments/{id}", enrollment.getId())
-                            .header("Authorization", "Bearer " + studentToken2)) // Logado como aluno 2
+                            .header("Authorization", "Bearer " + studentToken2))
                     .andExpect(status().isForbidden());
         }
     }
@@ -300,7 +300,7 @@ class EnrollmentControllerE2ETest {
             EnrollmentJPA enrollment = createEnrollment(studentUser1, course);
 
             mockMvc.perform(delete("/enrollments/{enrollmentId}", enrollment.getId())
-                            .header("Authorization", "Bearer " + adminToken)) // Logado como Admin
+                            .header("Authorization", "Bearer " + adminToken))
                     .andExpect(status().isNoContent());
         }
 
@@ -310,7 +310,7 @@ class EnrollmentControllerE2ETest {
             EnrollmentJPA enrollment = createEnrollment(studentUser1, course);
 
             mockMvc.perform(delete("/enrollments/{enrollmentId}", enrollment.getId())
-                            .header("Authorization", "Bearer " + studentToken2)) // Logado como aluno 2
+                            .header("Authorization", "Bearer " + studentToken2))
                     .andExpect(status().isForbidden());
         }
 

@@ -39,15 +39,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@Testcontainers // Habilita o Testcontainers
+@Testcontainers
 @ContextConfiguration(initializers = CourseControllerE2ETest.DataSourceInitializer.class) // Aponta para o inicializador
 @ActiveProfiles("test")
 class CourseControllerE2ETest {
 
-    @Container // Define o container do banco de dados
+    @Container
     private static final PostgreSQLContainer<?> postgresContainer = new PostgreSQLContainer<>("postgres:16-alpine");
 
-    // Classe interna para configurar a conexão com o banco do container
     public static class DataSourceInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
         @Override
         public void initialize(ConfigurableApplicationContext applicationContext) {

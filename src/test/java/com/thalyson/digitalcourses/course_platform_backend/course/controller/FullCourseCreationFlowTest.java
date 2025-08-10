@@ -44,7 +44,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @Testcontainers
-@ContextConfiguration(initializers = FullCourseCreationFlowTest.DataSourceInitializer.class) // Aponta para o inicializador
+@ContextConfiguration(initializers = FullCourseCreationFlowTest.DataSourceInitializer.class)
 @ActiveProfiles("test")
 class FullCourseCreationFlowTest {
 
@@ -96,7 +96,7 @@ class FullCourseCreationFlowTest {
 
     @BeforeEach
     void setup() throws Exception {
-        // Limpeza explícita para garantir estado 100% limpo
+
         lessonRepository.deleteAllInBatch();
         moduleRepository.deleteAllInBatch();
         courseRepository.deleteAllInBatch();

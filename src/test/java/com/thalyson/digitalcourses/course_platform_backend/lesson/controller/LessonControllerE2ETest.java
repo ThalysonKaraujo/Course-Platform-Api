@@ -134,7 +134,7 @@ class LessonControllerE2ETest {
             DadosCadastroLesson newLessonDto = new DadosCadastroLesson("Aula de POO", "Desc", "http://video.url", 3600, 1);
 
             mockMvc.perform(post("/modules/{moduleId}/lessons", module.getId())
-                            .header("Authorization", "Bearer " + anotherInstructorToken) // Outro instrutor
+                            .header("Authorization", "Bearer " + anotherInstructorToken)
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(objectMapper.writeValueAsString(newLessonDto)))
                     .andExpect(status().isForbidden());
@@ -174,7 +174,6 @@ class LessonControllerE2ETest {
         @DisplayName("Deve retornar 200 OK ao atualizar aula pelo instrutor dono do curso")
         void deveAtualizarAulaComSucesso() throws Exception {
             LessonJPA lesson = lessonRepository.saveAndFlush(new LessonJPA(module, "Aula Antiga", "D", "v", 100, 1));
-            // CORREÇÃO AQUI: Construtor com 5 argumentos
             DadosAtualizacaoLesson updateDto = new DadosAtualizacaoLesson("Aula Nova", "Nova Desc", "http://video.novo", 200, 2);
 
             mockMvc.perform(put("/modules/{moduleId}/lessons/{lessonId}", module.getId(), lesson.getId())
@@ -190,11 +189,10 @@ class LessonControllerE2ETest {
         @DisplayName("Deve retornar 403 Forbidden ao tentar atualizar aula de outro instrutor")
         void naoDeveAtualizarAulaDeOutroInstrutor() throws Exception {
             LessonJPA lesson = lessonRepository.saveAndFlush(new LessonJPA(module, "Aula Antiga", "D", "v", 100, 1));
-            // CORREÇÃO AQUI: Construtor com 5 argumentos
             DadosAtualizacaoLesson updateDto = new DadosAtualizacaoLesson("Aula Nova", "Nova Desc", "http://video.novo", 200, 2);
 
             mockMvc.perform(put("/modules/{moduleId}/lessons/{lessonId}", module.getId(), lesson.getId())
-                            .header("Authorization", "Bearer " + anotherInstructorToken) // Outro instrutor
+                            .header("Authorization", "Bearer " + anotherInstructorToken) 
                             .contentType(MediaType.APPLICATION_JSON)
                             .content(objectMapper.writeValueAsString(updateDto)))
                     .andExpect(status().isForbidden());
