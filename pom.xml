@@ -29,7 +29,6 @@
 		<java.version>17</java.version>
 		<datasource.url>jdbc:postgresql://localhost:5433/curso_platform_db</datasource.url>
 		<datasource.username>postgres</datasource.username>
-		<datasource.password>thalyson303030</datasource.password>
 		<testcontainers.version>1.19.8</testcontainers.version> </properties>
 
 	<dependencyManagement>
@@ -143,7 +142,7 @@
 				<configuration>
 					<url>${datasource.url}</url>
 					<user>${datasource.username}</user>
-					<password>${datasource.password}</password>
+					<password>${flyway.password}</password>
 					<locations>
 						<location>classpath:db/migration</location>
 					</locations>
