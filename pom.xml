@@ -134,6 +134,25 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-maven-plugin</artifactId>
+				<version>0.2</version>
+				<executions>
+					<execution>
+						<id>generate-openapi-json</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<outputFileName>openapi.json</outputFileName>
+					<outputDir>${project.build.directory}/classes/static/</outputDir>
+					<apiDocsUrl>http://localhost:8080/v3/api-docs</apiDocsUrl>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.flywaydb</groupId>

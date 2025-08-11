@@ -35,3 +35,5 @@ build/
 .classpath
 .project
 .settings/
+
+application-local.properties
