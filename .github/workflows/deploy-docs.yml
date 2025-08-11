@@ -1,12 +1,10 @@
 name: Deploy Docs to GitHub Pages
 
 on:
-  # Roda toda vez que você faz um push na branch 'main'
   push:
     branches:
       - main
 
-# Permissões necessárias para a Action publicar no GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -31,6 +29,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: List files in the static directory
+        run: ls -R ./target/classes/static
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
