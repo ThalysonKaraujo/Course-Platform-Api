@@ -13,23 +13,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course platform backend</name>
 	<description>Backend API for an online course platform using Spring Boot and PostgreSQL.</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+
 	<properties>
 		<java.version>17</java.version>
-		<datasource.url>jdbc:postgresql://localhost:5433/curso_platform_db</datasource.url>
-		<datasource.username>postgres</datasource.username>
 		<testcontainers.version>1.19.8</testcontainers.version>
 	</properties>
 
@@ -61,11 +47,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.flywaydb</groupId>
@@ -132,38 +113,8 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-			</plugin>
-
-			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>pre-integration-test</id>
-						<goals>
-							<goal>start</goal>
-						</goals>
-						<configuration>
-							<profiles>
-								<profile>docgen</profile>
-							</profiles>
-						</configuration>
-					</execution>
-					<execution>
-						<id>post-integration-test</id>
-						<goals>
-							<goal>stop</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<version>10.10.0</version>
 			</plugin>
 
 			<plugin>
@@ -172,14 +123,13 @@
 				<version>1.4</version>
 				<executions>
 					<execution>
-						<phase>integration-test</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 					</execution>
 				</executions>
 				<configuration>
-					<apiDocsUrl>http://localhost:8000/v3/api-docs</apiDocsUrl>
 					<outputFileName>openapi.json</outputFileName>
 					<outputDir>${project.build.directory}/classes/static</outputDir>
 				</configuration>

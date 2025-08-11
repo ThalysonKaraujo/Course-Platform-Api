@@ -24,15 +24,14 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
+      # O 'mvn package' agora gera o openapi.json offline
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: List files in the static directory
-        run: ls -R ./target/classes/static
-
+      # O upload continua o mesmo, pegando a pasta 'static'
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
