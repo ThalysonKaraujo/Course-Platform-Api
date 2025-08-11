@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.thalyson.digitalcourses</groupId>
 	<artifactId>course-platform-backend</artifactId>
@@ -97,7 +97,6 @@
 			<version>2.6.0</version>
 		</dependency>
 
-		<!-- Test Dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -155,14 +154,6 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<version>10.10.0</version>
-				<configuration>
-					<url>${datasource.url}</url>
-					<user>${datasource.username}</user>
-					<password>${flyway.password}</password>
-					<locations>
-						<location>classpath:db/migration</location>
-					</locations>
-				</configuration>
 			</plugin>
 
 			<plugin>
