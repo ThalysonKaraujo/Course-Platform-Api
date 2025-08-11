@@ -71,11 +71,13 @@ Com o banco de dados rodando e as variáveis configuradas, execute a aplicação
 ``````
 A API estará disponivel em http://localhost:8000.
 
-## Acessando a Documentação da API
-Após iniciar a aplicação, a documentação interativa do Swagger estará disponível no seu navegador. Use-a para explorar e testar todos os endpoints.
+## 📄 Documentação
 
-### Local
-http://localhost:8000/swagger-ui.html
+A documentação completa e interativa da API, gerada com **Swagger UI**, está disponível publicamente no GitHub Pages.
 
-### Deploy
-https://course-platform-api-production.up.railway.app/swagger-ui/index.html
+**[Acesse a Documentação aqui](https://thalysonkaraujo.github.io/Course-Platform-Api/)**
+
+
+
+
+
