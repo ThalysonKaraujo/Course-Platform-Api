@@ -67,7 +67,7 @@ Com o banco de dados rodando e as variáveis configuradas, execute a aplicação
 ``````
 ./mvnw spring-boot:run
 ``````
-A API estará disponivel em http://localhost:8000.
+A API vai estar disponivel em http://localhost:8000.
 
 ## 📄 Documentação
 
