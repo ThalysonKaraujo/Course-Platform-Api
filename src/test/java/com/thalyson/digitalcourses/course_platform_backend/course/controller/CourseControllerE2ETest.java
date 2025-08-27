@@ -1,16 +1,16 @@
 package com.thalyson.digitalcourses.course_platform_backend.course.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.thalyson.digitalcourses.course_platform_backend.auth.dto.DadosLogin;
-import com.thalyson.digitalcourses.course_platform_backend.category.jpa.CategoryJPA;
-import com.thalyson.digitalcourses.course_platform_backend.category.repository.CategoryRepository;
-import com.thalyson.digitalcourses.course_platform_backend.course.dto.DadosCadastroCourse;
-import com.thalyson.digitalcourses.course_platform_backend.course.jpa.CourseJPA;
-import com.thalyson.digitalcourses.course_platform_backend.course.repository.CourseRepository;
-import com.thalyson.digitalcourses.course_platform_backend.role.jpa.RoleJPA;
-import com.thalyson.digitalcourses.course_platform_backend.role.repository.RoleRepository;
-import com.thalyson.digitalcourses.course_platform_backend.user.jpa.UserJPA;
-import com.thalyson.digitalcourses.course_platform_backend.user.repository.UserRepository;
+import com.thalyson.digitalcourses.course_platform_backend.dto.DadosLogin;
+import com.thalyson.digitalcourses.course_platform_backend.model.CategoryJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.CategoryRepository;
+import com.thalyson.digitalcourses.course_platform_backend.dto.DadosCadastroCourse;
+import com.thalyson.digitalcourses.course_platform_backend.model.CourseJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.CourseRepository;
+import com.thalyson.digitalcourses.course_platform_backend.model.RoleJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.RoleRepository;
+import com.thalyson.digitalcourses.course_platform_backend.model.UserJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

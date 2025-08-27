@@ -1,11 +1,11 @@
 package com.thalyson.digitalcourses.course_platform_backend.auth.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.thalyson.digitalcourses.course_platform_backend.role.jpa.RoleJPA;
-import com.thalyson.digitalcourses.course_platform_backend.role.repository.RoleRepository;
-import com.thalyson.digitalcourses.course_platform_backend.user.dto.DadosAtualizacaoUser;
-import com.thalyson.digitalcourses.course_platform_backend.user.jpa.UserJPA;
-import com.thalyson.digitalcourses.course_platform_backend.user.repository.UserRepository;
+import com.thalyson.digitalcourses.course_platform_backend.model.RoleJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.RoleRepository;
+import com.thalyson.digitalcourses.course_platform_backend.dto.DadosAtualizacaoUser;
+import com.thalyson.digitalcourses.course_platform_backend.model.UserJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

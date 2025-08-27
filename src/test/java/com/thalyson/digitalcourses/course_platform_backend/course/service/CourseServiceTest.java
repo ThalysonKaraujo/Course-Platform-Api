@@ -1,13 +1,14 @@
 package com.thalyson.digitalcourses.course_platform_backend.course.service;
 
-import com.thalyson.digitalcourses.course_platform_backend.category.jpa.CategoryJPA;
-import com.thalyson.digitalcourses.course_platform_backend.category.repository.CategoryRepository;
-import com.thalyson.digitalcourses.course_platform_backend.course.dto.DadosCadastroCourse;
-import com.thalyson.digitalcourses.course_platform_backend.course.jpa.CourseJPA;
-import com.thalyson.digitalcourses.course_platform_backend.course.repository.CourseRepository;
+import com.thalyson.digitalcourses.course_platform_backend.model.CategoryJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.CategoryRepository;
+import com.thalyson.digitalcourses.course_platform_backend.dto.DadosCadastroCourse;
+import com.thalyson.digitalcourses.course_platform_backend.model.CourseJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.CourseRepository;
 import com.thalyson.digitalcourses.course_platform_backend.exception.ResourceNotFoundException;
-import com.thalyson.digitalcourses.course_platform_backend.user.jpa.UserJPA;
-import com.thalyson.digitalcourses.course_platform_backend.user.repository.UserRepository;
+import com.thalyson.digitalcourses.course_platform_backend.model.UserJPA;
+import com.thalyson.digitalcourses.course_platform_backend.service.CourseService;
+import com.thalyson.digitalcourses.course_platform_backend.repository.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

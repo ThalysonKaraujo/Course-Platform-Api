@@ -1,9 +1,10 @@
 package com.thalyson.digitalcourses.course_platform_backend.category.service;
 
-import com.thalyson.digitalcourses.course_platform_backend.category.dto.DadosCadastroCategory;
-import com.thalyson.digitalcourses.course_platform_backend.category.jpa.CategoryJPA;
-import com.thalyson.digitalcourses.course_platform_backend.category.repository.CategoryRepository;
+import com.thalyson.digitalcourses.course_platform_backend.dto.DadosCadastroCategory;
+import com.thalyson.digitalcourses.course_platform_backend.model.CategoryJPA;
+import com.thalyson.digitalcourses.course_platform_backend.repository.CategoryRepository;
 import com.thalyson.digitalcourses.course_platform_backend.exception.DuplicateResourceException;
+import com.thalyson.digitalcourses.course_platform_backend.service.CategoryService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
